@@ -4,12 +4,12 @@ function parseUrl(url) {
 };
 
 function fetchCoupons(parsedUrl) {
-  fetch(`http://www.saverz.org/api/v1/coupons/company=${parsedUrl}`)
+  // fetch(`http://www.saverz.org/api/v1/coupons/company=${parsedUrl}`)
+  fetch(`http://localhost:3000/api/v1/coupons/?company=${parsedUrl}`)
     .then(response => response.json())
     .then((data) => {
       console.log(data);
     });
-
 };
 
 
