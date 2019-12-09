@@ -8,14 +8,13 @@ function fetchData() {
   }
 }
 
-function getCouponCount() {
-  const data = fetchData()
-  console.log(data)
-  if(data.hostname === "www.casasbahia.com.br") {
-    return "4";
-  } else {
-    return "10";
-  }
+function getCoupons() {
+  /*fetch("http://www.saverz.org/api/v1/coupons")
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+    });*/
+
 };
 
 chrome.tabs.onUpdated.addListener((tab) => {
@@ -23,7 +22,6 @@ chrome.tabs.onUpdated.addListener((tab) => {
     const url = tabs[0].url;
     console.log(url)
   });
-  chrome.browserAction.setBadgeText({ text: getCouponCount() })
 })
 
 // console.log(chrome.browserAction);
@@ -32,3 +30,5 @@ chrome.tabs.onUpdated.addListener((tab) => {
 //     code: 'document.body.style.backgroundColor="#C3413B"'
 //   });
 // });
+
+  /*chrome.browserAction.setBadgeText({ text: getCouponCount() })*/
