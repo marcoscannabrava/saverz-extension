@@ -10,7 +10,7 @@ function fetchData() {
 
 function getCouponCount() {
   const data = fetchData()
-
+  console.log(data)
   if(data.hostname === "www.casasbahia.com.br") {
     return "4";
   } else {
@@ -18,8 +18,11 @@ function getCouponCount() {
   }
 };
 
-chrome.tabs.onActivated.addListener((tab) => {
-  console.log(tab)
+chrome.tabs.onUpdated.addListener((tab) => {
+  chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+    const url = tabs[0].url;
+    console.log(url)
+  });
   chrome.browserAction.setBadgeText({ text: getCouponCount() })
 })
 
