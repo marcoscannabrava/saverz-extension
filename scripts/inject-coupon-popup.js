@@ -9,17 +9,29 @@ document.body.insertAdjacentHTML('afterbegin',
 );
 
 document.getElementById("saverz-popup").insertAdjacentHTML('afterend', 
-  `<a href="#" id='saverz-close-popup' \
-  style='position: fixed; top: 1rem; right: 7rem; margin-left: auto; \
-  font-size: 32px; text-decoration: none; color: #8A8881; \
-  z-index: 999999999;' \
-  >&times;</a>`
+  `<style>
+  #saverz-close-popup {
+    position: fixed; top: 1rem; right: 7rem; margin-left: auto;
+    font-size: 32px; text-decoration: none; color: #8A8881;
+    transition: 0.3s;
+    z-index: 999999999;
+  }
+  #saverz-close-popup:hover {
+    font-size: 38px;
+    color: #504e49;
+    cursor: pointer;
+  }
+  </style>
+  <span id='saverz-close-popup'>&times;</span>`
 );
 
 function closePopups() {
-  document.getElementById("saverz-popup").remove();
-  document.getElementById("saverz-close-popup").remove();
+  document.querySelectorAll("#saverz-popup").forEach(element =>
+    element.remove()
+  );
+  document.querySelectorAll("#saverz-close-popup").forEach(element =>
+    element.remove()
+  );
 }
 
 document.getElementById("saverz-close-popup").addEventListener('click', closePopups, true);
-
