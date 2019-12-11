@@ -1,26 +1,27 @@
 {
-  "name": "Saverz chrome extension",
+  "name": "$averZ",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Shop Online & Fund Research",
 
   "manifest_version": 2,
   "background": {
     "scripts": [
       "scripts/api-calls.js",
       "scripts/utilities.js",
+      "scripts/inject-coupon-popup.js",
       "background.js"
     ]
   },
   "permissions": [
+    "activeTab",
     "tabs",
-    "webRequest"
-  ],
-    "permissions": [
-    "contextMenus", "storage"
+    "webRequest",
+    "http://*/",
+    "https://*/"
   ],
 
   "browser_action": {
-    "default_title": "See Coupons and Help Researchers",
+    "default_title": "Shop Online & Fund Research",
     "default_popup": "popup.html",
     "default_icon": "images/saverz-icon.png"
   },
