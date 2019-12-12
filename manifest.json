@@ -15,8 +15,8 @@
   "permissions": [
     "tabs",
     "webRequest",
-    "http://*/",
-    "https://*/"
+    "https://www.centauro.com.br/",
+    "https://www.casasbahia.com.br/"
   ],
 
   "browser_action": {
