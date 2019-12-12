@@ -12,13 +12,3 @@ document.addEventListener('DOMContentLoaded', function () {
   button.addEventListener('click', click);
   });
 
-// function listenClick() {
-//   const button = document.getElementById('send-data');
-//   button.addEventListener('click', () => {
-//     chrome.tabs.executeScript({
-//       file: 'scripts/inject-coupon-popup.js'
-//     });
-//   })
-// }
-
-
