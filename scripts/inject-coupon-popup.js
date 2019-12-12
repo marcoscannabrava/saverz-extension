@@ -8,6 +8,7 @@ document.body.insertAdjacentHTML('afterbegin',
   frameborder='0px'></iframe>`
 );
 
+
 document.getElementById("saverz-popup").insertAdjacentHTML('afterend', 
   `<style>
   #saverz-close-popup {
