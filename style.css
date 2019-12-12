@@ -1,0 +1,24 @@
+.container {
+  text-align: center;
+  margin: auto;
+}
+
+.btn {
+  margin-bottom: 2px;
+  font-size: 18px; 
+  color: #8A8881;
+  transition: 0.2s;
+  border: 1px solid #8A8881;
+}
+.btn:hover {
+  font-size: 20px;
+  color: #504e49;
+  cursor: pointer;
+}
+
+#saverz-btn {
+  transition: 0.2s;
+}
+#saverz-btn:hover {
+  cursor: pointer;
+}

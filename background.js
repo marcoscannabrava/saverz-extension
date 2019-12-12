@@ -25,16 +25,9 @@ chrome.tabs.onUpdated.addListener((tab) => {
 
 // Listener for First Install -------------------------------------------------
 chrome.runtime.onInstalled.addListener(function(details){
-  if(details.reason == "install"){
-      console.log("This is a first install!");
-      console.log(chrome.tabs.getCurrent)
-  }else if(details.reason == "update"){
-      var thisVersion = chrome.runtime.getManifest().version;
-      console.log("Updated from " + details.previousVersion + " to " + thisVersion + "!");
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        var tab = tabs[0];
-        chrome.tabs.update(tab.id, {url: "https://www.saverz.org/dashboard"});
-      });
-  }
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    var tab = tabs[0];
+    chrome.tabs.update(tab.id, {url: "https://www.saverz.org/dashboard"});
+  });
 });
 // Listener for First Install (END) -------------------------------------------------
