@@ -1,9 +1,17 @@
 document.body.insertAdjacentHTML('afterbegin', 
-  `<iframe id='saverz-popup'
-  style='height: 80vh; width: 25vw;
-  position: fixed; top: 0.5rem; right: 0.5rem; margin-left: auto;
-  box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.2);
-  z-index: 9999999; '
+  `<style>
+  #saverz-popup {
+    height: 7rem; width: 25vw;
+    position: fixed; top: 0.5rem; right: 0.5rem; margin-left: auto;
+    box-shadow: 2px 2px 6px 2px rgba(0,0,0,0.2);
+    z-index: 9999999; 
+    transition: 0.3s;
+  }
+  #saverz-popup:hover {
+    height: 80vh;
+  }
+  </style>
+  <iframe id='saverz-popup'
   src='https://www.saverz.org/companies/${company_id}'
   frameborder='0px'></iframe>`
 );
