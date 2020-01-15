@@ -13,10 +13,8 @@
     ]
   },
   "permissions": [
-    "tabs",
-    "webRequest",
-    "https://www.centauro.com.br/",
-    "https://www.casasbahia.com.br/"
+    // "webRequest", 
+    "http://*/*", "https://*/*"
   ],
 
   "browser_action": {
