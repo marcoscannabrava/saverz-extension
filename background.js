@@ -11,6 +11,9 @@ chrome.tabs.onUpdated.addListener((tab) => {
           chrome.browserAction.setBadgeText({text: coupons.length.toString() });
           chrome.tabs.executeScript({code: `var company_id = ${data["id"]};`},
             function() {
+              var tab = tabs[0];
+              // chrome.tabs.update(tab.id, {url: "https://www.centauro.com.br/"}); code to refreshe using the UTM source.
+              // how to make it so the page won't keep auto updating?
               chrome.tabs.executeScript({file: 'scripts/inject-coupon-popup.js'});
             }
           );
