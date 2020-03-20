@@ -1,5 +1,6 @@
 ![[$averZ Logo](https://www.saverz.org/)](/images/saverz-v2.png)
 
+#### [Demo Video](https://marcoscannabrava.github.io/videos/saverz.mp4)
 
 ## Installation
 - Clone Git Repository
